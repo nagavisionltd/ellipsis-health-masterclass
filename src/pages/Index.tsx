@@ -12,8 +12,13 @@ import { Countdown } from "@/components/Countdown";
 import { useReveal } from "@/hooks/use-reveal";
 import { useBooking } from "@/components/BookingDialog";
 import heroImg from "@/assets/hero.jpg";
-import jackImg from "@/assets/jack.jpg";
-import logoImg from "@/assets/ellipsis-logo.png";
+import jackAsset from "@/assets/jack-darby.jpg.asset.json";
+import markAsset from "@/assets/ellipsis-mark.png.asset.json";
+import wordmarkAsset from "@/assets/ellipsis-wordmark.png.asset.json";
+
+const jackImg = jackAsset.url;
+const logoImg = markAsset.url;
+const wordmarkImg = wordmarkAsset.url;
 
 
 const nav = [
@@ -129,11 +134,9 @@ const Index = () => {
       {/* NAV */}
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "glass-strong py-3" : "py-5"}`}>
         <div className="container-tight flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-2.5 group">
+          <a href="#top" className="flex items-center gap-2.5 group" aria-label="Ellipsis Health">
             <img src={logoImg} alt="Ellipsis Health logo" className="w-9 h-9 object-contain" width={72} height={72} />
-            <span className="font-display text-lg tracking-wide">
-              Ellipsis <span className="text-muted-foreground">Health</span>
-            </span>
+            <img src={wordmarkImg} alt="Ellipsis Health" className="h-6 w-auto object-contain" width={579} height={193} />
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
