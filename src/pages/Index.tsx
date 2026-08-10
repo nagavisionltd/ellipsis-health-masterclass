@@ -289,8 +289,8 @@ const Index = () => {
       <section id="about" className="relative py-28 md:py-40 overflow-hidden">
         <div className="absolute top-1/3 -left-40 w-96 h-96 rounded-full bg-primary/10 blur-[120px]" />
         <div className="container-tight">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            <div className="lg:col-span-5 reveal">
+          <div className="grid md:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="md:col-span-5 reveal">
               <div className="relative">
                 <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-accent/20 via-transparent to-primary/20 blur-2xl" />
                 <img
@@ -311,7 +311,7 @@ const Index = () => {
               </figure>
             </div>
 
-            <div className="lg:col-span-7 reveal">
+            <div className="md:col-span-7 reveal">
               <div className="eyebrow mb-5"><span className="w-8 h-px bg-accent" />Meet your guide</div>
               <h2 className="font-display text-4xl md:text-6xl font-light leading-tight">
                 Dr Jack Darby.<br />
@@ -484,10 +484,10 @@ const Index = () => {
         <div className="container-tight">
           <div className="grid md:grid-cols-3 gap-10 mb-14">
             <div>
-              <div className="flex items-center gap-2.5 mb-4">
+              <a href="#top" className="flex items-center gap-2.5 group mb-4" aria-label="Ellipsis Health">
                 <img src={logoImg} alt="Ellipsis Health logo" className="w-9 h-9 object-contain" width={72} height={72} loading="lazy" />
-                <span className="font-display text-lg">Ellipsis Health</span>
-              </div>
+                <img src={wordmarkImg} alt="Ellipsis Health" className="h-6 w-auto object-contain" width={579} height={193} loading="lazy" />
+              </a>
 
               <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
                 Performance medicine, made personal. In partnership with MediFit.
@@ -513,7 +513,7 @@ const Index = () => {
           </div>
           <div className="pt-8 border-t hairline flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} Ellipsis Health × MediFit. All rights reserved.
+              © {new Date().getFullYear()} Ellipsis Health, Dr Jack Darby. All rights reserved.
             </div>
             <div className="text-xs text-muted-foreground flex items-center gap-2">
               <span>Crafted in collaboration with</span>
