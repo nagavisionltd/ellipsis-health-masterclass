@@ -506,7 +506,7 @@ const Index = () => {
             <div>
               <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Contact</div>
               <ul className="space-y-2.5 text-sm text-foreground/80">
-                <li>hello@ellipsishealth.co</li>
+                <li><a href="mailto:info@ellipsis-health.com" className="hover:text-accent transition-colors">info@ellipsis-health.com</a></li>
                 <li>London, United Kingdom</li>
               </ul>
             </div>
