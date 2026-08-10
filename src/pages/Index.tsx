@@ -12,13 +12,9 @@ import { Countdown } from "@/components/Countdown";
 import { useReveal } from "@/hooks/use-reveal";
 import { useBooking } from "@/components/BookingDialog";
 import heroImg from "@/assets/hero.jpg";
-import jackAsset from "@/assets/jack-darby.jpg.asset.json";
-import markAsset from "@/assets/ellipsis-mark.png.asset.json";
-import wordmarkAsset from "@/assets/ellipsis-wordmark.png.asset.json";
-
-const jackImg = jackAsset.url;
-const logoImg = markAsset.url;
-const wordmarkImg = wordmarkAsset.url;
+import jackImg from "@/assets/jack.jpg";
+import logoImg from "@/assets/ellipsis-mark.png";
+import wordmarkImg from "@/assets/ellipsis-wordmark.png";
 
 
 const nav = [
