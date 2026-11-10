@@ -14,7 +14,6 @@ import { useBooking } from "@/components/BookingDialog";
 import heroImg from "@/assets/hero.jpg";
 import jackImg from "@/assets/jack.jpg";
 import logoImg from "@/assets/ellipsis-mark.png";
-import wordmarkImg from "@/assets/ellipsis-wordmark.png";
 
 
 const nav = [
@@ -118,7 +117,7 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Ellipsis Health — The 2.0 Version of You Masterclass | Dr Jack Darby";
+    document.title = "The Great British Sports Show — The 2.0 Version of You Masterclass | Dr Jack Darby";
     const meta = document.querySelector('meta[name="description"]') || (() => {
       const m = document.createElement("meta"); m.name = "description"; document.head.appendChild(m); return m;
     })();
