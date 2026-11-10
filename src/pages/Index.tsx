@@ -13,7 +13,10 @@ import { useReveal } from "@/hooks/use-reveal";
 import { useBooking } from "@/components/BookingDialog";
 import heroImg from "@/assets/hero.jpg";
 import jackImg from "@/assets/jack.jpg";
-import logoImg from "@/assets/ellipsis-mark.png";
+import pillarWellbeing from "@/assets/pillar-wellbeing.jpg";
+import pillarSport from "@/assets/pillar-sport.jpg";
+import pillarCommunity from "@/assets/pillar-community.jpg";
+import pillarDigital from "@/assets/pillar-digital.jpg";
 
 
 const nav = [
@@ -34,28 +37,28 @@ const trustBadges = [
 
 const curriculum = [
   {
-    no: "01",
+    no: "01", img: pillarWellbeing,
     icon: Brain,
     title: "Neurochemical Mastery & Mental Optimisation",
     desc: "Engineer dopamine, serotonin and focus. Build a brain that performs on demand — without burnout.",
     points: ["Dopamine reset protocols", "Stress & cortisol control", "Deep-work neurochemistry"],
   },
   {
-    no: "02",
+    no: "02", img: pillarSport,
     icon: Dumbbell,
     title: "Physical Optimisation & Lifestyle Levers",
     desc: "The training, nutrition and sleep architecture that transformed me from 105kg to 80kg — and kept it off.",
     points: ["Body recomposition", "Sleep & circadian design", "Movement minimums"],
   },
   {
-    no: "03",
+    no: "03", img: pillarCommunity,
     icon: Mountain,
     title: "Mental Toughness & Spiritual Growth",
     desc: "Forge resilience through adversity. Build the inner architecture of an unbreakable mind.",
     points: ["Stoic practice", "Identity & values work", "Discomfort training"],
   },
   {
-    no: "04",
+    no: "04", img: pillarDigital,
     icon: Compass,
     title: "Integration & Daily Protocol Design",
     desc: "Walk away with your personal 2.0 protocol — calibrated to your life, your goals, your biology.",
@@ -129,8 +132,7 @@ const Index = () => {
       {/* NAV */}
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "glass-strong py-3" : "py-5"}`}>
         <div className="container-tight flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-2.5 group" aria-label="The Great British Sports Show">
-            <img src={logoImg} alt="The Great British Sports Show logo" className="w-9 h-9 object-contain" width={72} height={72} />
+          <a href="#top" className="flex items-center gap-2.5 group border-l-[3px] border-primary pl-3" aria-label="The Great British Sports Show">
             <span className="font-sans-pro text-sm font-bold uppercase tracking-[0.18em] leading-none text-foreground">
               <span className="hidden sm:inline">The Great British Sports Show</span>
               <span className="sm:hidden">TGBSS</span>
@@ -241,11 +243,14 @@ const Index = () => {
             {curriculum.map((c) => (
               <article
                 key={c.no}
-                className="reveal card-gradient hairline border rounded-2xl p-8 md:p-10 relative overflow-hidden group hover:border-accent/40 transition-all duration-500"
+                className="reveal bg-card border rounded-2xl relative overflow-hidden group hover:border-primary/40 shadow-elegant transition-all duration-500"
               >
-                <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                <div className="flex items-start justify-between mb-8">
-                  <span className="font-display text-5xl font-extralight text-muted-foreground/40">{c.no}</span>
+                <div className="aspect-[16/9] overflow-hidden bg-muted">
+                  <img src={c.img} alt="" loading="lazy" width={1280} height={864} className="w-full h-full object-cover saturate-[0.85] group-hover:scale-[1.03] transition-transform duration-700" />
+                </div>
+                <div className="p-7 md:p-9">
+                                <div className="flex items-center justify-between mb-5">
+                  <span className="font-display text-4xl font-light text-primary">{c.no}</span>
                   <div className="w-12 h-12 rounded-full glass grid place-items-center text-accent">
                     <c.icon className="w-5 h-5" strokeWidth={1.5} />
                   </div>
@@ -260,6 +265,7 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
+                </div>
               </article>
             ))}
           </div>
@@ -488,8 +494,7 @@ const Index = () => {
         <div className="container-tight">
           <div className="grid md:grid-cols-3 gap-10 mb-14">
             <div>
-              <a href="#top" className="flex items-center gap-3 group mb-4" aria-label="The Great British Sports Show">
-                <img src={logoImg} alt="The Great British Sports Show logo" className="w-9 h-9 object-contain" width={72} height={72} loading="lazy" />
+              <a href="#top" className="flex items-center gap-3 group mb-4 border-l-[3px] border-primary pl-3" aria-label="The Great British Sports Show">
                 <span className="font-sans-pro text-base font-bold uppercase tracking-[0.18em] leading-snug text-foreground">
                   The Great British<br />Sports Show
                 </span>
