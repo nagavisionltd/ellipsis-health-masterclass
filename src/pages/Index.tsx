@@ -129,9 +129,12 @@ const Index = () => {
       {/* NAV */}
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "glass-strong py-3" : "py-5"}`}>
         <div className="container-tight flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-2.5 group" aria-label="Ellipsis Health">
-            <img src={logoImg} alt="Ellipsis Health logo" className="w-9 h-9 object-contain" width={72} height={72} />
-            <img src={wordmarkImg} alt="Ellipsis Health" className="h-6 w-auto object-contain" width={579} height={193} />
+          <a href="#top" className="flex items-center gap-2.5 group" aria-label="The Great British Sports Show">
+            <img src={logoImg} alt="The Great British Sports Show logo" className="w-9 h-9 object-contain" width={72} height={72} />
+            <span className="font-sans-pro text-sm font-bold uppercase tracking-[0.18em] leading-none text-foreground">
+              <span className="hidden sm:inline">The Great British Sports Show</span>
+              <span className="sm:hidden">TGBSS</span>
+            </span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -176,7 +179,9 @@ const Index = () => {
           <div className="max-w-3xl animate-fade-up">
             <div className="eyebrow mb-6 md:mb-8">
               <span className="w-8 h-px bg-accent" />
-              Ellipsis Health × Dr Jack Darby
+              <span className="hidden sm:inline">The Great British Sports Show</span>
+              <span className="sm:hidden">TGBSS</span>
+              {" × Dr Jack Darby"}
             </div>
             <h1 className="font-display text-[2.75rem] sm:text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight">
               Unlock the <span className="italic gradient-gold-text">2.0 Version</span><br />
@@ -483,9 +488,11 @@ const Index = () => {
         <div className="container-tight">
           <div className="grid md:grid-cols-3 gap-10 mb-14">
             <div>
-              <a href="#top" className="flex items-center gap-2.5 group mb-4" aria-label="Ellipsis Health">
-                <img src={logoImg} alt="Ellipsis Health logo" className="w-9 h-9 object-contain" width={72} height={72} loading="lazy" />
-                <img src={wordmarkImg} alt="Ellipsis Health" className="h-6 w-auto object-contain" width={579} height={193} loading="lazy" />
+              <a href="#top" className="flex items-center gap-3 group mb-4" aria-label="The Great British Sports Show">
+                <img src={logoImg} alt="The Great British Sports Show logo" className="w-9 h-9 object-contain" width={72} height={72} loading="lazy" />
+                <span className="font-sans-pro text-base font-bold uppercase tracking-[0.18em] leading-snug text-foreground">
+                  The Great British<br />Sports Show
+                </span>
               </a>
 
               <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
@@ -512,7 +519,7 @@ const Index = () => {
           </div>
           <div className="pt-8 border-t hairline flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} Ellipsis Health, Dr Jack Darby. All rights reserved.
+              © {new Date().getFullYear()} The Great British Sports Show, Dr Jack Darby. All rights reserved.
             </div>
             <div className="text-xs text-muted-foreground flex items-center gap-2">
               <span>Crafted in collaboration with</span>
